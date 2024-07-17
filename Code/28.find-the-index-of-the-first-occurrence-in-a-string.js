@@ -16,3 +16,4 @@ var strStr = function(haystack, needle) {
 // @lc code=end
 strStr("hello", "l");
 console.log('strStr("hello", "l");: ', strStr("sadbutsad", "sad"));
+console.log('strStr("hello", "l");: ', strStr("hello", "l"));
