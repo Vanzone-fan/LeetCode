@@ -1,3 +1,10 @@
+/*
+ * @lc app=leetcode id=169 lang=javascript
+ *
+ * [169] Majority Element
+ */
+
+// @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
@@ -21,3 +28,4 @@ var majorityElement = function (nums) {
     // Return the candidate (the algorithm assumes there is always a majority element)
     return candidate;
 };
+// @lc code=end
