@@ -23,7 +23,7 @@ LeetCode 是一个流行的在线编程题库平台,为开发者提供编程面�
 
 这个仓库中的解决方案使用了以下编程语言实现:
 
-- [JavaScript](javascript/)
+- JavaScript
 
 ## 贡献
 
