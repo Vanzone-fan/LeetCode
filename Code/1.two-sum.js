@@ -1,29 +1,10 @@
-/*
- * @lc app=leetcode id=1 lang=javascript
- *
- * [1] Two Sum
- */
-
-// @lc code=start
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-var twoSum = function (nums, target) {
-    var res = [];
-    var sumMap = new Map();
-
-    nums.forEach((item, index) => {
-        const complement = target - item;
-        if(sumMap.has(complement)){
-            const complementIndex = sumMap.get(complement);
-            if(complementIndex !== index){
-                res.push(index,complementIndex);
-            }
-        }
-        sumMap.set(item,index);
-    });
-    return res;
+const twoSum = function (nums, target) {
+	const result = new Map();
+	for (let i = 0; i < nums.length; i++) {
+		if (!result.has(target - nums[i])) {
+			result.set(nums[i], i);
+		} else {
+			return [i, result.get(target - nums[i])];
+		}
+	}
 };
-// @lc code=end

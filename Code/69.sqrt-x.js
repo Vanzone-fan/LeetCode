@@ -1,23 +1,5 @@
-/*
- * @lc app=leetcode id=69 lang=javascript
- *
- * [69] Sqrt(x)
- */
-
-// @lc code=start
-/**
- * @param {number} x
- * @return {number}
- */
-var mySqrt = function(x) {
-    for(let i=0;i<=x;i++){
-        if(i*i>x){
-            return i-1;
-        }
-        if(i*i===x){
-            return i;
-        }
-    }
+const mySqrt = x => {
+	let res = 0;
+	for (let i = 1; i * i <= x; i++) res = i;
+	return res;
 };
-// @lc code=end
-

@@ -1,17 +1,19 @@
-symbols = {
-    "I": 1,
-    "V": 5,
-    "X": 10,
-    "L": 50,
-    "C": 100,
-    "D": 500,
-    "M": 1000
-};
+const reference = new Map();
+reference.set('I', 1);
+reference.set('V', 5);
+reference.set('X', 10);
+reference.set('L', 50);
+reference.set('C', 100);
+reference.set('D', 500);
+reference.set('M', 1000);
 
-var romanToInt = function(s) {
-    value = 0;
-    for(let i = 0; i < s.length; i+=1){
-        symbols[s[i]] < symbols[s[i+1]] ? value -= symbols[s[i]]: value += symbols[s[i]]
-    }
-    return value
+const romanToInt = s => {
+	let res = 0;
+	for (let i = 0; i < s.length; i++) {
+		let current = reference.get(s[i]);
+		let next = s[i + 1] ? reference.get(s[i + 1]) : 0;
+		res += current < next ? -current : current;
+	}
+	return res;
 };
+romanToInt('IV');
