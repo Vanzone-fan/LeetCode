@@ -1,12 +1,11 @@
 const removeDuplicates = function (nums) {
-	let i = 0;
-	for (let j = 1; j < nums.length; j++) {
-		if (nums[j] !== nums[i]) {
-			i++;
-			nums[i] = nums[j];
+	let slowPointer = 0;
+	for (const fastPointerItem of nums){
+		if(nums[slowPointer]!==fastPointerItem){
+			nums[++slowPointer]=fastPointerItem
 		}
 	}
-	return i + 1;
+	return slowPointer+1
 };
 // @lc code=end
 removeDuplicates([1, 1, 2]);
